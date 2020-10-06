@@ -1,0 +1,21 @@
+Team Random: Ethan Machleder, Mary Shang, Jessica Yeung
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2020-10-06
+
+$ python3 -m venv ~/myherozero
+
+Prompts Python to -m(ake) a venv (virtual environment) of Python3 (Python version 3)
+as a directory called "myherozero" with subsequent directories inside it containing
+supporting files.
+
+
+Virtual environments are used to run modules in a specific version of Python. 
+Without them, it would not be possible to run two different modules with different
+requirements with the same Python installation.
+ 
+
+Sources:
+https://virtualenv.pypa.io/en/stable/
+https://docs.python.org/3.4/tutorial/venv.html
+https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/

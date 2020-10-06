@@ -1,0 +1,20 @@
+Team Random: Ethan Machleder, Mary Shang, Jessica Yeung
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2020-10-06
+
+Other than using DictReader in the csv module to convert the csv file to a 
+dictionary, we can also read the file in python by using open() and build a 
+dictionary from there. But the downside of this is that we have to strip the 
+first and last lines of the csv file and deal with all the commas.
+
+A great way to randomly select a weighted occupation is to use random.choices(). 
+After creating a list of occupations and a list of percentages, 
+random.choice(sequence, weights=<weights>, k=<num>) allows us to randomly 
+select an element from sequence (the list of occupations) based on weights 
+(the list of percentages). k indicates the length of the returned list, 
+and in this case, it's 1 because we are only picking one occupation.
+
+It is helpful to put the step-by-step plans/approaches to solving an assignment
+ problem at the top of the homework file so that we can always refer to them
+ when coding and keep ourselves on track.
