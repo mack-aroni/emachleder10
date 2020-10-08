@@ -1,0 +1,33 @@
+Team Random: Ethan Machleder, Mary Shang, Jessica Yeung
+SoftDev
+K09 -- Simple Path to Greatness
+2020-10-08
+
+NOTE: WE KNOW NOTHING ABOUT FLASK. PLEASE BE MERCIFUL.
+
+Q0: This syntax seems to be similar to the syntax in Java where a variable
+is assigned to a creation of an instance of a datatype.
+Ex: int var = (int)(Math.random())
+
+Q1: The only point of reference we have is that in a user terminal, "$cd /"
+redirects to the root directory. (/)
+
+Q2: This will print to the root directory (in the terminal). This will print
+the name of the function.
+
+Q3: This will appear because a return statement in a function will output the
+return value.
+
+Q4: These constructs seem to be similar to the ones in Java, including but
+not limited to: dot operators, (string) literals, and methods.
+_____________________________________________________________________________
+After running app.py:
+
+- Http link was generated. When pasted into browser, shows a webpage with the
+printed words "No hablo queso!" (from the return statement).
+
+- "__main__" was output in terminal later (from the print statement).
+
+- Was necessary to switch server to that of a development one rather than
+production. Added some lines to the python file as well as installed waitress
+package from terminal.
