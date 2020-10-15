@@ -1,0 +1,30 @@
+Team Random: Ethan Machleder, Mary Shang, Jessica Yeung
+SoftDev
+K12 -- ...or The Only Constant is Change?
+2020-10-15
+
+app.py and the templates folder are in the same directory.
+
+Within the templates folder, there is one HTML file named model_tmplt.
+
+We predicted that if we accessed http://localhost:5000/,
+the webpage would load "No hablo queso!".
+If we accessed http://localhost:5000/my_foist_template
+the webpage would print the elements in coll with linebreaks.
+
+After running app.py, we found that what we predicted was right.
+
+Q0: What happens if you remove render_template from this line?
+We are still able to access http://localhost:5000/, but when we try to access
+http://localhost:5000/my_foist_template, it returns a NameError, saying
+name 'render_template' is not defined.
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+Yes, it should be http://localhost:5000/my_foist_template.
+
+Q2: What is the significance of each argument?
+'model_tmplt.html' is the file containing the template that is to be rendered;
+foo is the variable in model_tmplt representing the title of the webpage, and
+foo="fooooo" sets the title name to "fooooo";
+collection is a variable in the model_tmplt.html file, and collection=coll sets
+its value to coll, a list of integers in app.py.

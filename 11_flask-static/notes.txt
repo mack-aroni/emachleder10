@@ -1,0 +1,21 @@
+Team Random: Ethan Machleder, Mary Shang, Jessica Yeung
+SoftDev
+K11 -- Some Things Never Change
+2020-10-15
+
+app.py and the static folder are in the same directory.
+
+Within the static folder, there are two files named foo.
+One is a HTML type document (and has html embeding) while the 
+other's file type is simply listed as "File". 
+
+We predicted that if we accessed http://localhost:5000/static/foo.html 
+the webpage would load the text "this here some plaintext tho" properly.
+We predicted that if we tried to access http://localhost:5000/static/foo,
+the webpage would not load.
+
+When we loaded http://localhost:5000/static/foo.html the webpage did load
+with the text "this here some plaintext tho" (If you inspect-elemented,
+the html was exactly the same as the file). When we tried to load 
+http://localhost:5000/static/foo, the foo file was downloaded from the
+browser.
