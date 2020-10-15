@@ -1,0 +1,19 @@
+Team Calculator: Ethan Machleder, Eric Lo
+SoftDev
+K13: Template for Success
+2020-10-16
+
+Used DictReader to convert the file into a dictionary (dic) with 2 keys "jobs" and "percentages".
+Inside each key we used DictReader to append the proper items.
+Then we combined both lists into tuples and zipped them to their corresponding job:percentage.
+We also made a mini list containing the titles of each column.
+Then we used random.choices() to pick the random job.
+Finally, we funneled all this info into the template using render_template.
+
+We put the file reading inside of the tablified function so the table would remain on refresh.
+
+We found that putting <br> inside a string and subbing it into jinja didn't auto convert it into
+html, so we just hardcoded the heading into the template.
+
+For the table, we used a zip (tuple of tuples) to list the contents of the dictionary onto
+the table and we iterated through both tuples simultaneously with a for loop.

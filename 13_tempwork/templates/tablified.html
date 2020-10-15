@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 
+Team Calculator: Ethan Machleder, Eric Lo
+SoftDev
+K13: Template for Success
+2020-10-16
+ -->
+
+<html>
+	<head>
+		<title> Occupations </title>
+		<h3>Random Occupation</h3>
+	</head>
+	<body>
+		<br>
+		{{randomocc}}
+		<br>
+		<br>
+		Team Calculator: Ethan Machleder, Eric Lo
+		<br>
+		SoftDev
+		<br>
+		K13: Template for Success
+		<br>
+		2020-10-16
+		<br>
+		<table>
+			<thead>
+				<tr>
+				{% for item in titles %}
+					<th class="c1">{{item}}</th>
+				{% endfor %}
+				</tr>
+			</thead>
+			<tbody>
+			{% for job, percentage in data %}
+				<tr>
+					<td class="c2">{{job}}</td>
+					<td class="c2">{{percentage}}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		
+	</body>
+
+</html>
+
