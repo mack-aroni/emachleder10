@@ -1,0 +1,31 @@
+Team Calculator: Ethan Machleder, Eric Lo
+SoftDev
+K13: Template for Success
+LJ00: Le Voyage de Learnination avec Mongo, Première Phase
+2020-29-16
+
+- The Mongo database is a structured way to store and access data
+- NoSQL database: not a legacy approach of rows/columns
+- NoSQL document database, data is stored in documents, which are stored in collections of documents, which are stored in a database
+- Collection: an organized store of documents in MongoDB usually with common fields between documents. There can be many collections per database and many documents per collection.
+
+- Document: a way to organize and store data as a set of field-value pairs.
+- Field: a unique identifier for a datapoint. (like a key)
+- Value: data related to a given identifier.
+
+- Atlas is the main database which uses MongoDB, and is configured in a replica set, which are several instances of MongoDB and store redundant data.
+	- Atlas does more than just database stuff for MongoDB
+- Replica Set: a few connected machines that store the same data to ensure that if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
+- Instance: a single machine locally or in the cloud, running a certain software, in our case it is the MongoDB database.
+	- By having multiple instances, data is not lost if one machine goes down
+- Cluster: group of servers that store your data.
+-  Atlas > Cluster > Replica Set > Instances
+
+- In clusters page, top panel does services like charts and realms, and left panel is navigation
+- Collections button > data explorer
+- Connect button > ip address and user info
+- connect button > connect with the mongo shell
+- 0.0.0.0 allows ip access from anywhere
+
+- There is an browser IDE in mongoDB for lab assignments, comes with a code editor and terminal
+-`mongo` is a command that lists info about the installation
