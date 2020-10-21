@@ -1,6 +1,5 @@
 Team Calculator: Ethan Machleder, Eric Lo
 SoftDev
-K13: Template for Success
 LJ00: Le Voyage de Learnination avec Mongo, Première Phase
 2020-29-16
 

@@ -1,0 +1,59 @@
+Team Calculator: Ethan Machleder, Eric Lo
+SoftDev
+LJ00: Le Voyage de Learnination avec Mongo, Première Phase
+2020-29-16
+
+- JSON: Javascript Standard Object Notation
+- JSON format:
+	- start and end with curly braces {}
+	-separate key and value with :
+	-separate key-value pairs with ,
+	-put “” around keys
+	-keys aka fields
+- Some software will accept if you don’t put “” but not all software does that
+- Values may also be documents
+- JSON is friendly, readable, and familiar, but it is text based (slow), space-consuming, and supports limited data types.
+- BSON: binary JSON, represents JSON in binary to achieve high performance and general purpose.
+- BSON has been extended to add more types like dates and binary data.
+- MongoDB internally stores in BSON but it can still be thought of and viewed with JSON
+
+- Importing and exporting data: 
+- export in BSON because it’s lighter and faster, but viewing with JSON
+- “mongoimport” (JSON) --uri “<Atlas Cluster URI>”
+			      --dump=<filename>.json
+			      (optional) --collection <collection name>
+	- Imports data in BSON dump
+- “mongoexport” (JSON) --uri “<Atlas Cluster URI>”
+                 --collection=<collection name>
+                 --out=<filename>.json
+- exports data in JSON (the entire thing is one command)
+-”mongorestore” (BSON) -- uri “<Atlas Cluster URI>”
+   	      --drop dump 
+- imports data in BSON dump, removes the existing database in that location to prevent errors
+-”mongodump” -- uri “<Atlas Cluster URI>” 
+- (BSON): exports data in BSON
+- URI = uniform resource identifier, the url when you connect
+- srv: secure connection string: username, password, then database
+- Exports to the directory you are currently in
+- Using mongorestore and mongodump is a good backup strategy
+
+- Ways to interact with data:
+- Data explorer: collections button
+	- Left menu bar lists databases and their collections
+- Namespace - The concatenation of the database name and collection name is called a namespace.
+- In query, can list multiple key-value pairs to narrow down search (can be done in shell) (use valid JSON)
+	
+- Connecting to an unspecified database defaults to test. Admin is the default administrative database.
+- “show dbs”: shows list of databases in the cluster
+- Local database is another default database for administrative stuff.
+- “use <database>” command specifies which db we’re using
+- “show collections” lists the commands
+- “db.<collection name>.find( <query> )”
+	-query includes the curly brackets
+	-“db.<collection name>.find( <query> ).count()” tells you how many results you get
+-“db.<collection name>.find( <query> ).pretty()” makes each field-value pair appear on a separate line
+-using the find command with no query lists the first 20 entries that doesn’t really have an ordering system
+- “it” allows you to see more query results, iterates through a cursor
+- Cursor: a pointer to a result set of a query
+- Pointer: a direct address of the memory location
+- Mongo shell is a javascript interpreter
