@@ -1,0 +1,56 @@
+Team7: Ethan Machleder, Constance Chen, Helena Williams
+SoftDev
+LJ01: Le Voyage de Learnination avec Mongo, Deuxième Phase
+2020-8-11
+
+Query Comparison Operators:
+- They use the $. It precedes MQL operators, allows access to field values, and precedes Aggregation pipeline stages
+- $eq and $neq: equal and not equal to
+- $gt and $lt: greater and less than
+- $gte and $lte: greater and less than or equal to
+- MQL: {<field>: {<operator>: <value>,... }, ...} 
+-Aggregation: {<operator>: [ <$field>, <value>,... ], ...} 
+-in the shell, put this stuff within the query for find()
+
+Logic Operators:
+- $and: all
+- is implicitly used in queries
+- use when same operator is used more than once in the query (like and(or, or))
+- $or: at least one
+- $nor: none 
+- and, or, and nor: {<operator>: [{statement1}, …]}
+- $not: negate
+- {“$not”: {statement}}
+
+Expressive Query Operator:
+- $expr
+- allows the use of aggregation expressions within the query language
+- allows the use of variables and conditional statements
+- can compare fields of the same document to each other
+- { “$expr”: { <expression> } }
+- ex: db.trips.find({ "$expr": { "$eq": [ "$end station id", "$start station id"] }}).count()
+- $ not only denotes operator, but also indicates the value of a field rather than the field name itself
+
+Array Operators:
+- $push: adds an element to an array, or turns a field into an array field if previously a different type
+- order matters in an array query
+- querying an array field by specifying an array will only return exact matches, while just specifying given elements returns whichever documents have arrays that contain those elements
+- $all: returns all documents that contain the specified array elements without regarding order
+- $size: returns documents that have a specified array length    
+
+Array Operators and Projection:
+- a projection allows us determine what fields the cursor shows (eg if there are too many to read that don’t matter
+- .find(<query>, <projection>)
+- e.g. db.listingsAndReviews.find({ "amenities": "Wifi" }, { "price": 1, "address": 1}).pretty()
+- use 1 to include the field, use 0 to exclude the field. 
+- You cannot mix 1’s and 0’s, except if you’re using all 1’s and you want to exclude the _id
+- $elemMatch shows results based on the elements inside of array fields (can be used in query or in projection)
+- db.grades.find({ "class_id": 431 },
+{ "scores": { "$elemMatch": { "score": { "$gt": 85 } } }}).pretty()
+
+Array Operators and Sub-Documents:
+- MQL uses dot notation to access sub-document fields
+- eg: “start station location.type”
+- “field.field.field…”
+- $regex allows you to match string patterns
+- { <field>: { $regex: 'pattern', $options: '<options>' } }

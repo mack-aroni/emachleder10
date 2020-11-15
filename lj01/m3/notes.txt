@@ -1,0 +1,29 @@
+Team7: Ethan Machleder, Constance Chen, Helena Williams
+SoftDev
+LJ01: Le Voyage de Learnination avec Mongo, Deuxième Phase
+2020-8-11
+
+- You can insert a document into a collection using the MongoDB Atlas interface.
+- Every document in a collection must have a unique _id value.
+- ObjectId() - Default value for the _id field.
+
+- db.[collection].findOne(); : gets a random document from the collection.
+- db.[collection].insert([document]) : attempts to insert a document into the collection.
+- You can insert a document without specifying the _id value, which will be created automatically.
+
+- You can insert multiple documents into a collection using an array of documents.
+- When many documents are inserted, they are inserted in the order of the array, a duplicate will bring an error.
+- When (“ordered” : ”false”) all documents will be inserted unless they have a duplicate _id.
+- You can create a database by using [new database] and adding an input.
+
+- You can add data points to a document.
+- MongoDB has a flexible data model, which means that you can have fields that contain documents, or arrays as their values.
+
+- updateOne() will update the first applicable document while updateMany() will update all applicable documents.
+- update[One/Many]( {search query}, {“$inc” : (query being changed) : (value)})
+- You can change multiple fields with the $inc operator by using {“$inc”: (query1) : (value1) , (query2) : (value2)}
+- $set updates the query to the given value.
+- $push adds an element to an array field.
+
+- delete[One/Many]() delete document/s.
+- db.[collection].drop() deletes a collection.
