@@ -1,0 +1,45 @@
+Team Calculator- Eric Lo, Ethan Machleder
+SoftDev
+lj02: m5 -- Le Voyage de Learnination avec Mongo, Troisième Phase
+2020-11-16
+
+Chapter 5: Indexing and Aggregation Pipeline
+
+Aggregation Framework:
+- Another way to query
+- Use aggregate() instead of find() because sometimes you might also want to group and modify data in your query
+- aggregate( [  {action1}, {action2},... ] ) //the order matters
+	- $match: { query } filters out everything that doesn’t match the query
+	- $project: { query } filters out every field that doesn’t match the query
+	- $group: { _id: “<something>”,                                //group by expression
+		<field1>: {<accumulator1>: <expression1> },
+		… } }
+- $sum adds up a total
+
+Sort() and limit():
+- .sort( {<field1> : +/-1, …} ).limit(<#>)
+	- +1 means increasing order, -1 means decreasing, in order of the fields listed
+	- limit(#) returns only the first # of entries in that list
+	- sort().limit() == limit().sort()
+	- sort() is always performed before limit()
+- .skip(<offset>) skips the first <offset> number of entries
+- Cursor methods (sort, limit, pretty, count) are not applied to the data in the database, but the data that the cursor returns (find, aggregate).
+	
+Introduction to Indexes:
+- Make queries more efficient and improves performance
+- Special data structure in a database that stores small portion of collection dataset in easily traversable form
+- createIndex( { <field>: +/-1, <field>: +/-1, ... } ) makes the index so whenever you need to find something based on that, the search will be faster. 
+- Increasing or decreasing order is determined by the sign of the 1
+- In compound indexes, field order matters since the it will first order by field 1, then by field 2
+
+Introduction to Data Modeling:
+- When you organize fields in a document to support querying and application (when to use sub documents, arrays, other documents, etc)
+- Rule: Data is stored in the way that it is used
+	- e.g. Do you have info that varies in amount from doc to doc
+	- Store things together that are regularly queried together
+
+Upsert - Update or Insert?:
+- Everything in MQL that is used to locate a doc can also be used to modify it.
+- updateOne({<query>}, {<update>}, {“upsert”: true})
+- Update if there is a match, insert if there is not match, so you don’t have to search for dupes manually
+- Be mindful if the {<update>} is enough to create a new document, with similar form to the other documents

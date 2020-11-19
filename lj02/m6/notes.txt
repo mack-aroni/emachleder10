@@ -1,0 +1,31 @@
+Team Calculator- Eric Lo, Ethan Machleder
+SoftDev
+lj02: m6 -- Le Voyage de Learnination avec Mongo, Troisième Phase
+2020-11-18
+
+Chapter 6: Next Steps
+
+Data Explorer Features
+- Has multiple tabs: find, indexes, schema anti-patterns, aggregation, search indexes
+	- You can view and create indexes and view its performance
+	- Schema gives you advice about your data
+	- Aggregation allows you to build aggregation pipelines and observe the data as it is changed
+	- Atlas search is advanced search
+
+Atlas Products and Options
+- Organizations group billing, projects, teams
+- Each project can have multiple uniquely-named clusters and separately grouped teams
+- Realm offers services for web and mobile apps/integrating mongoDB into an app without worrying about servers
+- Charts creates dynamic data visualizations that can be exported with the aggregation pipeline
+	- data source > query > chart type
+
+MongoDB Compass
+- UI Tool (Seperate downloadable app)
+- Paste connection info into it
+- connecting on atlas: compass is the third option
+-documents and aggregations and indexes tab is the same
+-schema tab takes a sample of the data and analyzes the shape of the documents like date created, number of null fields, number of nested fields/field values, etc.
+-explain plan tab tells you how the data was found in the database/the performance
+	-helps you understand how optimized your queries are
+-validation tab allows you to have requirements for your data
+
