@@ -1,0 +1,7 @@
+Team Elephant (Jeffrey Huang, Matthew Hui, Winnie Huang, Ethan Machleder)
+SoftDev
+K15 -- Sessions Greetings
+2020-12-11
+
+Noticed that we needed to have a secret_key otherwise we wouldn't be able to load into our root page.
+The session variable/storage seems to have global access in the file.
