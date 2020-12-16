@@ -1,0 +1,11 @@
+Team Elephant (Jeffrey Huang, Matthew Hui, Winnie Huang, Ethan Machleder)
+SoftDev
+K16 -- No Trouble
+2020-12-15
+
+"INSERT INTO course_grades (name, grade, id) VALUES (?, ?, ?)":
+This line enabled us to input arguments with variable parameters. 
+
+Can execute multiple commits throughout one python script.
+
+SELECT * FROM: Replacing the * in here with name or other columns only printed out those columns. 
