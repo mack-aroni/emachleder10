@@ -1,0 +1,6 @@
+Team IDK (Ethan Machleder, Matthew Hui)
+SoftDev Period 1
+K18: Filler and Finery // inline CSS
+2021-01-12
+
+Lorem Ipsum Text from https://www.lipsum.com/feed/html
