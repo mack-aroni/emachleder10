@@ -20,9 +20,7 @@ def disp_loginpage():
     if 'username' in session: #Checks if the user is logged in
         return render_template('response.html', user = 'abc')
     else:
-        return render_template( 'login.html')
-
-
+        return render_template('login.html')
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def welcome():

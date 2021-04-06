@@ -6,8 +6,7 @@ db = sqlite3.connect("foo")
 
 c = db.cursor() #facilitate db ops
 
-c.execute("CREATE TABLE roster(name TEXT,
-           userid INTEGER)")
+c.execute("CREATE TABLE roster(name TEXT,userid INTEGER)")
 
 db.commit() #save changes
 db.close()
