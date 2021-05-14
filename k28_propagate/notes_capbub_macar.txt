@@ -1,0 +1,37 @@
+Team macar Ethan Machleder, Ariel Schechter
+SoftDev pd1
+K28 -- Bubble Bubble Toil Trouble 
+2021-05-11
+
+1) Prediction: when you click on anything in the table,
+an alert will pop up with the value of the cell you clicked
+on. QCC: Why use a for loop and addEventListener and not
+the onclick property?
+
+Reality: our prediction was accurate.
+
+2) Prediction: the order of results when a click is made 
+will be the cell data first, then the row, then the entire 
+table. 
+
+Reality: our prediction was accurate.
+
+3) Prediction: when e.stopPropagation() is called, it 
+will stop the other 2 alerts from happening (only the first 
+alert with the cell data will appear).
+
+Reality: we were correct about the effects of stopPropagation
+but wrong about the actual order. We did not notice the true 
+as the third argument in the addEventListener for the entire table
+to call clicky which made it come first and therefore be the only 
+one to appear out of the three.
+
+4) Prediction: the event listeners will all bypass the stopPropagation 
+when uncommented because the third argument is set to true on all 3. 
+The order that the events are listed does matter and will reflect the 
+order that they appear in the alert.
+
+Reality: we were wrong about both predictions. stopPropagation still stops 
+the second and third alerts from coming through and the order of the 
+event listeners does not matter, it will always go table, then row, then cell. 
+Does this mean it follows the html tree when the third argument is set to true?
